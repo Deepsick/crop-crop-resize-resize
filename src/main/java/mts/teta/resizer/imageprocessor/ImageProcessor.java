@@ -18,10 +18,10 @@ public class ImageProcessor {
 
     MarvinPluginCollection.crop(
             image.clone(),
-            image, params.x(),
-            params.y(),
-            params.width(),
-            params.height()
+            image, params.getX(),
+            params.getY(),
+            params.getWidth(),
+            params.getHeight()
     );
     MarvinImageIO.saveImage(image, file.getAbsolutePath());
   }
@@ -39,7 +39,7 @@ public class ImageProcessor {
     }
 
     File outputFile = app.getOutputFile();
-    double quality = app.getQuality() / 100;
+    double quality = (double) app.getQuality() / 100;
     int width = app.getWidth() != 0 ? app.getWidth() : image.getWidth();
     int height = app.getHeight() != 0 ? app.getHeight() : image.getHeight();
 
@@ -56,7 +56,7 @@ public class ImageProcessor {
               .width(width)
               .height(height)
               .build();
-;
+
     try {
       Thumbnails
               .of(app.getInputFile())
