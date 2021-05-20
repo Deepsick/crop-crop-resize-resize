@@ -9,6 +9,7 @@
     <properties>
         <maven.compiler.source>16</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <dependencies>
 <!-- Работа с консольными параметрами picocli.info -->
@@ -85,7 +86,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
                     <source>16</source>
-                    <target>16</target>
+                    <target>8</target>
                 </configuration>
             </plugin>
         </plugins>
